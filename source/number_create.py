@@ -22,23 +22,35 @@ def number_create():
     back_zone = [i for i in range(1, 13)]  # 后区所有号码
 
     # 生成前区
-    front_real = []
+    front_area = []
     for i in range(5):
         val = random.choice(front_zone)
-        front_real.append(val)
+        front_area.append(val)
         # front_real.append(random.choice(front_zone))
         front_zone.remove(val)
     # print(front_real)
-    front_real.sort()
+    front_area.sort()
 
     # 生成后区
-    back_real = []
+    back_area = []
     # front_real = []
     for i in range(2):
         val = random.choice(back_zone)
-        back_real.append(val)
+        back_area.append(val)
         # front_real.append(random.choice(front_zone))
         back_zone.remove(val)
-    back_real.sort()
+    back_area.sort()
 
-    return front_real, back_real
+    # 处理为字符串
+    for i in range(len(front_area)):
+        if front_area[i] < 10:
+            front_area[i] = '0' + str(front_area[i])
+        else:
+            front_area[i] = str(front_area[i])
+    for i in range(len(back_area)):
+        if back_area[i] < 10:
+            back_area[i] = '0' + str(back_area[i])
+        else:
+            back_area[i] = str(back_area[i])
+
+    return front_area, back_area
