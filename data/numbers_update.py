@@ -10,9 +10,9 @@ from bs4 import BeautifulSoup as bs
 import json
 import datetime
 
-mysql_host = '192.168.213.128'
+mysql_host = '124.221.214.139'
 mysql_user = 'root'
-mysql_password = '123456'
+mysql_password = 'zyh709089.'
 mysql_port = 3306
 mysql_db = 'lottery'
 
@@ -53,6 +53,8 @@ def numbers_update():
         date, draw_num, front_area, back_area)
     try:
         cursor.execute(sql)
+        conn.commit()
+        conn.close()
         print("时间：\t", date, "号码：\t", front_area, '\t', back_area)
     except:
         return

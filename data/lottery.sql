@@ -11,7 +11,7 @@
  Target Server Version : 50737
  File Encoding         : 65001
 
- Date: 20/03/2022 21:17:56
+ Date: 23/03/2022 22:16:48
 */
 
 SET NAMES utf8mb4;
@@ -2276,5 +2276,6 @@ INSERT INTO `lottery_number` VALUES ('2022-03-12', '22026', '11 14 22 23 27', '0
 INSERT INTO `lottery_number` VALUES ('2022-03-14', '22027', '03 06 11 31 32', '05 12');
 INSERT INTO `lottery_number` VALUES ('2022-03-16', '22028', '04 09 16 17 35', '01 07');
 INSERT INTO `lottery_number` VALUES ('2022-03-19', '22029', '07 08 10 14 17', '10 12');
+INSERT INTO `lottery_number` VALUES ('2022-03-21', '22030', '12 14 15 21 30', '01 09');
 
 SET FOREIGN_KEY_CHECKS = 1;
