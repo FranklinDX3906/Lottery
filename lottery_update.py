@@ -10,11 +10,13 @@ from bs4 import BeautifulSoup as bs
 import json
 import datetime
 
-mysql_host = '124.221.214.139'
-mysql_user = 'root'
-mysql_password = 'zyh709089.'
-mysql_port = 3306
-mysql_db = 'lottery'
+from source import config
+
+mysql_host = config.mysql_host
+mysql_user = config.mysql_user
+mysql_password = config.mysql_password
+mysql_port = config.mysql_port
+mysql_db = config.mysql_db
 
 
 def numbers_update():
@@ -64,10 +66,11 @@ if __name__ == "__main__":
     import time
     while (True):
         time_hour = time.localtime().tm_hour
-        # print(time.localtime())
+        print(time.strftime('%Y-%m-%d %H:%M:%S'))
         if time_hour == 21:
+            print('于{}更新最新一期号码。。。'.format(time.strftime('%Y-%m-%d %H:%M:%S')))
             numbers_update()
-            print(time.asctime)
+            # print(time.asctime)
             time.sleep(86400)
         else:
             time.sleep(60)
