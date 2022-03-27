@@ -6,11 +6,11 @@
 
 import requests
 import pymysql
-from bs4 import BeautifulSoup as bs
+# from bs4 import BeautifulSoup as bs
 import json
 import datetime
 
-from source import config
+from . import config
 
 mysql_host = config.mysql_host
 mysql_user = config.mysql_user
@@ -19,7 +19,7 @@ mysql_port = config.mysql_port
 mysql_db = config.mysql_db
 
 
-def numbers_update():
+def number_update():
     """
     功能：  获取最新一期号码，存入数据库
     """
@@ -58,7 +58,8 @@ def numbers_update():
         conn.commit()
         conn.close()
         print("时间：\t", date, "号码：\t", front_area, '\t', back_area)
-    except:
+    except Exception as ex:
+        print(ex)
         return
 
 
@@ -66,10 +67,10 @@ if __name__ == "__main__":
     import time
     while (True):
         time_hour = time.localtime().tm_hour
-        print(time.strftime('%Y-%m-%d %H:%M:%S'))
+        # print(time.strftime('%Y-%m-%d %H:%M:%S'))
         if time_hour == 21:
             print('于{}更新最新一期号码。。。'.format(time.strftime('%Y-%m-%d %H:%M:%S')))
-            numbers_update()
+            number_update()
             # print(time.asctime)
             time.sleep(86400)
         else:

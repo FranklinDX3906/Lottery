@@ -15,12 +15,12 @@ mysql_port = config.mysql_port
 mysql_db = config.mysql_db
 
 
-def number_get(num=100):
+def number_get(num=-1):
     """
     功能：
         获取最新一百期的号码
     输入：
-        num：获取最新的期数，默认100
+        num：获取最新的期数，默认全部
     输出：
         numbers：最近一百期的号码
     """
@@ -34,8 +34,11 @@ def number_get(num=100):
     cursor = conn.cursor()
 
     # 获取对应数量的
-    sql = "select * from lottery_number order by Time desc limit {}".format(
-        num)
+    if num == -1:
+        sql = "select * from lottery_number"
+    else:
+        sql = "select * from lottery_number order by Time desc limit {}".format(
+            num)
     cursor.execute(sql)
 
     res = cursor.fetchall()
