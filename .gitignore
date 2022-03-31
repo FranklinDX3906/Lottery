@@ -1,2 +1,5 @@
 /test
-/source/__pycache__/
+/source/
+/copy
+lottery_ssh.bat
+!/source/*.py

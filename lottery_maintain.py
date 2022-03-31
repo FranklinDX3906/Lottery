@@ -9,6 +9,15 @@ import time
 from source import number_predict, number_update, number_res
 
 # print(number_predict.number_predict_money())
+# 预测两种
+
+res1 = number_predict.number_predict()
+res2 = number_predict.number_predict_money()
+
+# res1 = {'numbers': [{...}], 'base_num': 170}
+# 写入库中
+print('于{}预测最新一期号码。。。'.format(time.strftime('%Y-%m-%d %H:%M:%S')))
+number_res.number_res_write(res1, res2)
 
 while (True):
     time_hour = time.localtime().tm_hour

@@ -23,7 +23,7 @@ def number_predict():
     while (start_numbers):
         have_res = 0  # 是否存在预测结果
         number_list = number_get.number_get(start_numbers)
-        # print(start_numbers)
+        print(start_numbers)
         for _ in range(max_try):
             # 先随机产生一组数
             front_area, back_area = number_create.number_create()
@@ -55,6 +55,8 @@ def number_predict_money():
     # 获取所有号码
     number_list = number_get.number_get()
     for _ in range(max_try):
+        if (_ % 1000 == 0):
+            print(_)
         # 先随机产生一组数
         front_area, back_area = number_create.number_create()
         number = {'front_area': front_area, 'back_area': back_area}

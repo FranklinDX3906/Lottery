@@ -25,6 +25,7 @@
   - 未完成或需要修改的部分，<u>**下划线加粗**</u>
 - lottery_console.py：以控制台的形式输出预测结果的函数
 - lottery_maintain.py：大乐透维护，更新数据库，并把分析结果存入数据库
+- lottery_check.py：大乐透号码在100期查询（自用）
 - <u>**lottery_route.py：大乐透后端**</u>
 - data：静态计算数据文件夹
   - numbers_get.py：获取历史所有大乐透号码，存入数据库
