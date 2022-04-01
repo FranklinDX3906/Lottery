@@ -8,7 +8,9 @@
 ## 使用
 
 - 修改source/config.py中的参数，按照个人喜好
-- 运行lottery_console.py
+- 运行lottery_console.py在命令行中预测
+- 运行lottery_check.py查询号码
+- 进入[DX3906的简单大乐透预测](http://124.221.214.139/)使用网页版
 
 ## 功能及流程
 
@@ -26,7 +28,7 @@
 - lottery_console.py：以控制台的形式输出预测结果的函数
 - lottery_maintain.py：大乐透维护，更新数据库，并把分析结果存入数据库
 - lottery_check.py：大乐透号码在100期查询（自用）
-- <u>**lottery_route.py：大乐透后端**</u>
+- lottery_route.py：大乐透后端
 - data：静态计算数据文件夹
   - numbers_get.py：获取历史所有大乐透号码，存入数据库
   - lottery.sql：大乐透历史号码表
@@ -43,7 +45,7 @@
     - number_predict_money()：号码预测，最小中奖金额原则
   - number_res.py：预测结果读写
     - number_res_write()：写入两种预测结果
-    - <u>**number_res_get()：读取两种预测结果**</u>
+    - number_res_get()：读取两种预测结果
 
 ## 后续预计
 
