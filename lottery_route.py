@@ -9,7 +9,7 @@ from flask import Flask, render_template
 import json
 from gevent import pywsgi
 
-from source import number_res
+from source import number_res, log_get
 # from source import htmls
 
 app = Flask(__name__)
@@ -45,6 +45,16 @@ def lottery():
     return res
 
 
+@app.route('/log')
+def log():
+    data = log_get.log_get()
+    res = ''
+    for item in data:
+        res += '<p>' + item + '</p>'
+
+    return res
+
+
 if __name__ == '__main__':
-    server = pywsgi.WSGIServer(('0.0.0.0',23333),app)
+    server = pywsgi.WSGIServer(('0.0.0.0', 23333), app)
     server.serve_forever()

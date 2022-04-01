@@ -16,3 +16,6 @@ mysql_user = 'root'
 mysql_password = 'zyh709089.'
 mysql_port = 3306
 mysql_db = 'lottery'
+
+# 日志路径
+log_path = './test/maintain.log'
