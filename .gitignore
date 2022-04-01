@@ -3,3 +3,5 @@
 /copy
 lottery_ssh.bat
 !/source/*.py
+.vscode/
+__pycache__/

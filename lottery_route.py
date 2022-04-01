@@ -7,6 +7,7 @@
 from flask_cors import CORS
 from flask import Flask, render_template
 import json
+from gevent import pywsgi
 
 from source import number_res
 # from source import htmls
@@ -45,4 +46,5 @@ def lottery():
 
 
 if __name__ == '__main__':
-    app.run(port=23333, debug=True)
+    server = pywsgi.WSGIServer(('0.0.0.0',23333),app)
+    server.serve_forever()

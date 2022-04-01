@@ -9,8 +9,12 @@ import time
 from source import number_predict, number_update, number_res
 
 # print(number_predict.number_predict_money())
-# 预测两种
 
+# 更新库
+print('于{}更新最新一期号码。。。'.format(time.strftime('%Y-%m-%d %H:%M:%S')))
+number_update.number_update()
+
+# 预测两种
 res1 = number_predict.number_predict()
 res2 = number_predict.number_predict_money()
 
