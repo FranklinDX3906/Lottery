@@ -6,7 +6,7 @@
 
 from flask_cors import CORS
 from flask import Flask, render_template
-import json
+# import json
 from gevent import pywsgi
 
 from source import number_res, log_get
@@ -31,7 +31,7 @@ def lottery():
     back_area = " ".join(number1[0]['后区'])
     p1 = "<p>前区：{}</p><p>后区：{}</p><p>原则：{}</p><p>期数：{}</p>".format(
         front_area, back_area, "最小中奖次数原则", res1['基于的期数'])
-    number2 = res1['号码']
+    number2 = res2['号码']
     front_area = " ".join(number2[0]['前区'])
     back_area = " ".join(number2[0]['后区'])
     p2 = "<p>前区：{}</p><p>后区：{}</p><p>原则：{}</p><p>期数：{}</p><p>总金额：{}</p>".format(
