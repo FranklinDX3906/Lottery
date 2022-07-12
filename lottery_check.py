@@ -6,8 +6,8 @@
 
 from source import number_get, number_analyze
 
-front_area = ['08', '15', '16', '19', '33']
-back_area = ['03', '04']
+front_area = ['07', '10', '17', '19', '30']
+back_area = ['09', '11']
 
 numbers_list = number_get.number_get(100)
 

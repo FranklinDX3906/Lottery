@@ -32,8 +32,8 @@ def lottery():
     p1 = "<p>前区：{}</p><p>后区：{}</p><p>原则：{}</p><p>期数：{}</p>".format(
         front_area, back_area, "最小中奖次数原则", res1['基于的期数'])
     number2 = res2['号码']
-    front_area = " ".join(number2[0]['前区'])
-    back_area = " ".join(number2[0]['后区'])
+    front_area = " ".join(number2['前区'])
+    back_area = " ".join(number2['后区'])
     p2 = "<p>前区：{}</p><p>后区：{}</p><p>原则：{}</p><p>期数：{}</p><p>总金额：{}</p>".format(
         front_area, back_area, "最小中奖次数原则", res2['基于的期数'], res2["此号码中将总金额"])
 

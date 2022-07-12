@@ -1,7 +1,6 @@
 /test
-/source/
+source/__pycache__
 /copy
 lottery_ssh.bat
-!/source/*.py
 .vscode/
-__pycache__/
+/__pycache__

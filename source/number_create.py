@@ -54,3 +54,7 @@ def number_create():
             back_area[i] = str(back_area[i])
 
     return front_area, back_area
+
+
+if __name__ == "__main__":
+    print(number_create())
