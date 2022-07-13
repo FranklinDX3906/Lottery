@@ -11,11 +11,7 @@ MAX_TRY = 100000
 allow_rate = 0.01
 
 # mysql参数
-mysql_host = '124.221.214.139'
-mysql_user = 'root'
-mysql_password = 'zyh709089.'
-mysql_port = 3306
-mysql_db = 'lottery'
+xxx
 
 # 日志路径
 log_path = './test/maintain.log'
